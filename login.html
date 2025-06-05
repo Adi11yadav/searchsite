@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #dceeff, #fff1e6);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .login-page {
+      max-width: 400px;
+      margin: 100px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-page h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-page select,
+    .login-page input,
+    .login-page button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .login-page button {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-page button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-page">
+    <h2>Login</h2>
+    <select id="userType">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+    <input type="password" id="password" placeholder="Password (Admin only)" />
+    <button onclick="handleLogin()">Login</button>
+  </div>
+
+  <script>
+    function handleLogin() {
+      const type = document.getElementById("userType").value;
+      const pass = document.getElementById("password").value;
+
+      if (type === "admin" && pass !== "admin123") {
+        alert("Incorrect admin password");
+        return;
+      }
+
+      localStorage.setItem("userType", type);
+      alert(`${type.charAt(0).toUpperCase() + type.slice(1)} logged in`);
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

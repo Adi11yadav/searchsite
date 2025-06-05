@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #fff0f5);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 10px;
+}
+
+.title {
+  font-size: 26px;
+  text-align: center;
+  flex-grow: 1;
+  color: #333;
+}
+
+.title i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.login-btn {
+  padding: 10px 18px;
+  background-color: #ff7f50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #e5673f;
+}
+
+/* Reload Users Strip */
+.reload-strip {
+  width: 100%;
+  background-color: #007bff;
+  padding: 15px;
+  text-align: center;
+}
+
+#reloadBtn {
+  padding: 10px 20px;
+  background-color: white;
+  color: #007bff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#reloadBtn:hover {
+  background-color: #e0eaff;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, #e6f2ff, #ffe6f0);
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#searchBtn {
+  padding: 10px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Result Container */
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #e6f2ff, #ffe6f0);
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.result-container .divider {
+  width: 2px;
+  background-color: #888;
+  height: 30px;
+  margin: 0 20px;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
+
+/* User Cards */
+.user-card {
+  background: #f0f8ff;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+}
+
+.user-card h3 {
+  margin: 0 0 5px;
+}
+
+.user-card p {
+  margin: 3px 0;
+}
+
+/* Error */
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

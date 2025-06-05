@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Directory</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1 class="title"><i class="fas fa-users"></i> User Directory</h1>
+    <a href="login.html"><button class="login-btn">Login</button></a>
+  </div>
+
+  <!-- Reload Users Strip -->
+  <div class="reload-strip">
+    <button id="reloadBtn">Reload Users</button>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main-container">
+
+    <!-- Search Strip -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search by name or email..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Result Section (Initially Hidden) -->
+    <div id="resultContainer" class="result-container hidden">
+      <div id="resultCount">Results: 0</div>
+      <div class="divider"></div>
+      <div id="resultNames">Names: -</div>
+    </div>
+
+    <!-- User List -->
+    <div id="userList"></div>
+    <div id="error" class="error"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
